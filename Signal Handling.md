@@ -16,8 +16,6 @@ We will raise **SIGINT** signal. SIGINT is an interactive attention signal
 From our main program we will try printing numbers from 1 to 100. 
 When the loop is busy printing the numbers, inside the loop we introduced some logic- before before printing a number, we created a random number (any number from 1 to 30), if that random number is equal to 10, then we raised the signal which means program will just exit without further doing. But we will not let it happen. We introduced a function by whihc we will handle the signal. Below is the function, have a look. 
 
-
-T
 ```C
 void signalHandler(int sigValue)
 {
@@ -35,4 +33,29 @@ void signalHandler(int sigValue)
 }
 
 ```
+And below is the main program where we call the above function 
+
+```C
+int main(void)
+{
+    int i,x;
+    // registering the signal handler
+    signal(SIGINT,signalHandler);
+    srand(time(NULL));
+    puts("This program should print 1 to 100 if no signal interrupt occurs..");
+
+    for (i=1;i<=100;i++)
+    {
+        printf("%4d",i);
+        // simulation has been created with the help of random numbers
+        x=1+rand()%30;
+        if (x==10)
+        {
+            raise(SIGINT);
+        }
+    }
+}
+
+```
+
 
