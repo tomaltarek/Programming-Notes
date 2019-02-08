@@ -1,3 +1,3 @@
-# Any kind of notes that help your IT works 
-We will discuss some easy peasy programming featurs
+# Wha this Repository is all about
+We will discuss any kind of notes related to a programmer. 
  
