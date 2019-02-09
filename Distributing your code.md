@@ -1,6 +1,6 @@
 # Distributing your codes
 
-**Goal**
+**Goal:**
 We will write some codes and distribute them to the outside world. 
 
 
@@ -21,7 +21,7 @@ Void tiger()
 cout<<”Grrrrrrrrrrrrr””<<endl; 
 ```
 
-Suppose you have written this extraordinary code, By writing this, you have become the  absolute owner of this intellectual property. Now you can sell this to others for five bucks. If you can sell it to 100 other programmers, you can cashed five hundred dollars. 
+Suppose you have written this extraordinary code. By writing this, you have become the  absolute owner of this intellectual property. Now you can sell this to others for five bucks. If you can sell it to 100 other programmers, you can cashed five hundred dollars. 
 
 If you carefully look, on the above code, there is no main method. Therefore you cannot make an .exe version out of it. That was even not your intention when you made this code. Your intention was provide this to others in the form of other type of binaries. 
 
