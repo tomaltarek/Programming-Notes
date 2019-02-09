@@ -1,23 +1,25 @@
-###Distributing your codes
+# Distributing your codes
 
 Goal: 
 We will write some codes and distribute them to the outside world. 
 
 
-Introduction
+## Introduction
 Reusability is the heart of modern software industry. We should not write a piece of code that somebody else somewhere in the world has already written. In simple word, we should not reinvent the wheel. 
 But not all the codes in the world are open-sourced. Sometimes we may need to buy codes written by other programmers. 
 In this note, we will show some examples how to distribute source code in binary format. Codes in this note are are written in C++ . For compiling codes we have used CodeBlocks IDE and Developer Command Prompt for VS 2017. 
 
 
-How codes are generated?
+## How codes are generated?
 First off, we need a source file. We can use any editor of our choice (notepad etc) to write a source code. There are tons of programming languages on this planet to write a source file. Below is an example of a source file written in C++ 
 
+```C++
 #Include <iostream>
 Using namespace std; 
 Void tiger()
 {
 cout<<”Grrrrrrrrrrrrr””<<endl; 
+```
 
 Suppose you have written this extraordinary code, By writing this, you have become the  absolute owner of this intellectual property. Now you can sell this to others for five bucks. If you can sell it to 100 other programmers, you can cashed five hundred dollars. 
 
