@@ -1,6 +1,6 @@
 # Distributing your codes
 
-*Goal: *
+**Goal**
 We will write some codes and distribute them to the outside world. 
 
 
@@ -99,7 +99,7 @@ On the command prompt , he has to write: cl main.cpp /link myLibrary.lib
 Thus main.exe application will create. 
 The output of the program will look like this: 
 ```
-OUTPUT Grrrrrrrrrrrr
+OUTPUT: Grrrrrrrrrrrr
 ```
 
 ## Example 2: 
@@ -129,5 +129,7 @@ Make a header file  as you did in example 1, along with the header file, provide
 On an IDE , suppose in CodeBlocks , client will create a console application project. On that project he will link your library fille. To do this he will right click on the project and go to build options. Then on linker settings he will attach the library file, then saved the project. 
 
 The client will create his own source file, to refer your library he has to include the header file on his source file. 
+
+
 
 *@tomal tarek, Feb 8, 2019, তমাল তারেক, ৮/২/২০১৯*
