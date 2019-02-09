@@ -69,7 +69,7 @@ This will produce a library file myLibray.lib
 This is the library you are going to sell to your client. Usually with a library you need to provide a header file (with .h extension) , that is easy to make. On your folder just create a file tiger.h , the file content will look like this: 
 
 ```
-Void tiger()
+Void tiger();
 
 
 ```
