@@ -58,10 +58,10 @@ If you have Visual studio installed, yo can use **Developer Command Prompt VS 20
 
 With CD command go to your folder where you created tiger.cpp 
 
-To compile your file , type: **cl /c tiger.cpp** 
-That will produce the binary file **tiger.obj.** 
+To compile your file , type: *cl /c tiger.cpp* 
+That will produce the binary file *tiger.obj.*
 
-Now to create a library out of this object file type: **lib/out:myLibrayName.lib tiger.obj** 
+Now to create a library out of this object file type: *lib/out:myLibrayName.lib tiger.obj* 
 
 This will produce a library file myLibray.lib 
 
@@ -76,7 +76,7 @@ myLibrary.lib
 Tiger.h 
 
 
-Step 2: (What your client will do?)
+**Step 2: (What your client will do?)**
 
 Your client will dump the library file and header file in a folder. He will create a source  file of his own, for simplicity let's create a source file on the same folder and name it main.cpp. This file has a int main() method which means this would be an application. 
 
@@ -97,15 +97,16 @@ On the command prompt , he has to write: cl main.cpp /link myLibrary.lib
 Thus main.exe application will create. The output of that application would be: Grrrrrrrrrrrr
 
 
-Example 2: 
+## Example 2: 
 We can do the same thing as described in example 1 with the help of a IDE. We will use CodeBlocks. 
 
-Step 1 (What seller will do) 
+**Step 1 (What seller will do)** 
 
 Create a project of type static library. 
 The project will create a source file main.c. Right click and remove the file from the project. Then add tiger.cpp file. Put the following code on that file: 
 
 
+```C++
 #include<iostream>
 using namespace std;
 
@@ -113,15 +114,15 @@ __declspec(dllexport) void tiger()
 {
     cout<<"Grrrrrrrrrrrr"<<endl;
 }
-
+```
 
 Build the project. Go to the project folder, on bin/Debug folder a library file will be created. NOTICE that this time the file extension is not .lib, it is .a which means archive file. MingGW produce library file with .a extension. 
 
 Make a header file  as you did in example 1, along with the header file, provide your library to the client. 
 
-Step 2: 
+**Step 2:**
 On an IDE , suppose in CodeBlocks , client will create a console application project. On that project he will link your library fille. To do this he will right click on the project and go to build options. Then on linker settings he will attach the library file, then saved the project. 
 
 The client will create his own source file, to refer your library he has to include the header file on his source file. 
 
-
+*@tomal tarek, Feb 8, 2019
