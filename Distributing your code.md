@@ -19,6 +19,7 @@ Using namespace std;
 Void tiger()
 {
 cout<<”Grrrrrrrrrrrrr””<<endl; 
+}
 ```
 
 Suppose you have written this extraordinary code. By writing this, you have become the  absolute owner of this intellectual property. Now you can sell this to others for five bucks. If you can sell it to 100 other programmers, you can cashed five hundred dollars. 
