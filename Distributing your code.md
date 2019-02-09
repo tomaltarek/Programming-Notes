@@ -67,7 +67,12 @@ This will produce a library file myLibray.lib
 
 
 This is the library you are going to sell to your client. Usually with a library you need to provide a header file (with .h extension) , that is easy to make. On your folder just create a file tiger.h , the file content will look like this: 
+
+```
 Void tiger()
+
+
+```
 
 A header file is kind of an interface, it declares all the methods your library file will define. By looking at the header file the client will have some idea what your library is about. The header file is a kind of documentation too. Although our header file has only one line, in reality header files are not really that short. You can have a look on a Standard library header file. 
 
