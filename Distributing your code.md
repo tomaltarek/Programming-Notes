@@ -131,7 +131,7 @@ Build the project. Go to the project folder, on bin/Debug folder a library file 
 
 Make a header file  as you did in example 1, along with the header file, provide your library to the client. 
 
-**Step 2:**
+**Step 2(What your client will do?)**
 On an IDE , suppose in CodeBlocks , client will create a console application project. On that project he will link your library fille. To do this he will right click on the project and go to build options. Then on linker settings he will attach the library file, then saved the project. 
 
 The client will create his own source file, to refer your library he has to include the header file on his source file. 
