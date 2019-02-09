@@ -82,20 +82,25 @@ Your client will dump the library file and header file in a folder. He will crea
 
 From the main.cpp file, the client can refer to your library. The program will look like this. 
 
+```C++
 #include “tiger.h” 
 
 Int main()
 {
 tiger();
 }
+```
 
 
 After writing the program the client will compile and link the program with the myLibrary.lib 
 
 On the command prompt , he has to write: cl main.cpp /link myLibrary.lib
 
-Thus main.exe application will create. The output of that application would be: Grrrrrrrrrrrr
-
+Thus main.exe application will create. 
+The output of the program will look like this: 
+```
+OUTPUT Grrrrrrrrrrrr
+```
 
 ## Example 2: 
 We can do the same thing as described in example 1 with the help of a IDE. We will use CodeBlocks. 
@@ -125,4 +130,4 @@ On an IDE , suppose in CodeBlocks , client will create a console application pro
 
 The client will create his own source file, to refer your library he has to include the header file on his source file. 
 
-*@tomal tarek, Feb 8, 2019
+*@tomal tarek, Feb 8, 2019, তমাল তারেক, ৮/২/২০১৯*
