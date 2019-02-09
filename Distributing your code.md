@@ -136,6 +136,10 @@ On an IDE , suppose in CodeBlocks , client will create a console application pro
 
 The client will create his own source file, to refer your library he has to include the header file on his source file. 
 
+## Conclusion: ##
+
+In this note , I have shown how to distribute your code in binary format. This is one of the ways. You can sell your code in the form of .dll file also. In case of Java , you can simply distribute the .class file (remember, class file is made of java bytecode, therefore non-human-readable. Or you can make a jar file and sell it to your clients. There are many more ways you can distribute your codes. Keep in mind , give the binaries, not the source files. 
+
 
 
 *@tomal tarek, Feb 8, 2019, তমাল তারেক, ৮/২/২০১৯*
