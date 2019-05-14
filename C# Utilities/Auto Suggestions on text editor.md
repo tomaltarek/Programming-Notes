@@ -1,5 +1,5 @@
-#Auto Suggestions on text box
-®tomal tarek
+# Auto Suggestions on text box
+©tomal tarek, arcola,sk
 
 As you type in, when you press space key, a nice and cool auto-suggestions list will pop up based on previous word. 
 
