@@ -1,5 +1,6 @@
  
  
+ ```C#
  private string CurrentWord()
         {
             int wordEndPosition = textBox1.SelectionStart;
@@ -13,3 +14,4 @@
             string word = textBox1.Text.Substring(currentPosition, wordEndPosition - currentPosition);
             return word;
         }
+```
