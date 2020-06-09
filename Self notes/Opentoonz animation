@@ -1,0 +1,9 @@
+
+Making animated movie or presentation requires a paid software. Those software are pricy and new animator like me cannot afford them. But there is a nice and fully featured software called Opentoonz. 
+
+After playing one day with the software I made my first animation. But when I tried rendering it as mp4 I got error that ffmpeg was not installed in my computer. I then downloaded a ffmpeg for windows, basically it is not an installation, I just unzipped the folder and gave the path of bin folder to opentoonz, that took care of the issue. 
+
+Opentoonz looks to be complex, I belive it is built for professionals. 
+
+
+Turials link: https://www.youtube.com/watch?v=vBTLLtTsQFM&t=223s
