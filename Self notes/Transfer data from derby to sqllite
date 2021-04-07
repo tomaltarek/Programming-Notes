@@ -1,0 +1,8 @@
+Step 1: Go to the directoy where your derby db is
+Step 2: Run the below command-
+
+CALL SYSCS_UTIL.SYSCS_EXPORT_TABLE('APP', 'table_name',
+                                  'myfile.del', null, null, 'UTF-8');
+this will create a file myfile.del                                   
+                                  
+Step 3: Copied the file to this directory changed it to myfile.csv. Then import it to my existing users table. 
