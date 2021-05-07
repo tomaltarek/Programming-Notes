@@ -1,0 +1,69 @@
+It took almost a day to figure out. 
+First I published my applcation for windows and with little isseu I was able to run it. But for linux it 
+was such a pain. I rememember a year ago when I wrote JavaFx program intending to run it crosss-plateform, 
+I was failed and quit. Now this time I chose electron framework and still linux is giving me troubles. This 
+time I did not give up and tried and after almost a day, I was able to make it to run on my Ubuntu machine. 
+
+
+
+The first problem was I publish the app for linux by adding this script to package.json file
+
+"build": "electron-packager . --icon=assets/icons/win/icon.ico    -f -w sqlite3"
+
+Then I run on command: npm run build 
+This builds a a Password Mgm-linux-x64 folder on application folder. But for some reason icon did not show
+up. I copied the folder to my Ubuntu shared drive. After that I logged into my Ubuntu machine and found that
+icon is still missing. Anyway I Doubleclick on the 'Password Mgm' which is the applcation, but got a message 
+that this is a shared library and there is no program installed on my Ubuntu machine that can run this sort 
+of files. Looks like linux is not recognishing this file as executable file. After some online research what 
+I found was that, this is actuality a modern executable file with pie. pie is a security feature from electron
+and they are applying this after electron version three, my electron version is 5.0.2 and it must have this 
+pie feature in it. Linux file manager is still not caught up with this security feature. May be they will fix
+this issue in future. So looks like the pie is preventing my application to be running. On the internet I found
+two wowrkaround. One is to create a .desktop file which I tried but without success. Next is to run the appplication 
+from the terminal. Usually most linux users run applcations from terminal anyway. Therefore from the same directory
+I ran-
+
+  ./'Password Mgm'
+  
+This time linux thinks for a while and then gave me bunches of errors, which was good. At least I am able to
+see some logs to know what the heck is going on. From the error log I got 
+
+Uncaught Exception:
+Error: Knex: run
+$ npm install sqlite3 --save
+Cannot find module /resources/app/node_modules/sqlite3/lib/binding/
+electron-v5.0-linux-x64/node_sqlite3.node'
+
+From the distribution folder I went to /resources/app/node_modules/sqlite3/lib/binding/ and found 
+no electron-v5.0-linux-x64 folder, instead I found electron-v5.0-windows-x64 folder. This should not be 
+the case. Then from my source applcation, I went to node_modules and under sqlite3/lib/binding I found the folder
+for windows only. This thing was transferring to the distribution folder. On the linux distribution folder
+I changed the name from electron-v5.0-windows-x64 to electron-v5.0-linux-x64, but it did not resolve 
+the isseu. Undwer this folder is actually a node file named 'node_sqlite3.node', I understood this file is 
+somewhat windows made, we need same file for linux. I tried to download this binary file directly (without npm)
+and found a git repository, I replaced the 'node_sqlite3.node' file with my downloaded one. This time I was
+getting the error that this node binary file is compiled other version such as node js 62,67, 72 etc, my version 
+should be out of node js version 70. I never found any binary for 70 and wanted to address the problem differently.
+
+First uninstalled sqlite3 by-
+     npm uninstall sqlite3
+Then I ran this command-
+     npm install sqlite3 save-dev --target_arch=x64 --target_platform=linux
+
+Then I went to source applcation node_modules and found that under binding two folders have created. One is
+'napi-v3-linux-x64' the other is 'napi-v3-win32-x64'. This means now I got the node_sqlite3.node both for windows
+and linux. I rebuild the app by -  
+  npm rebuild 
+Then do a npm start to see the app is still running on windows. It did run on windows ok. Then I publish the 
+app for linux by-
+     npm build
+The build script is like this-
+  "build": "electron-packager . --icon=assets/icons/win/icon.ico    -f -w sqlite3",
+
+I copied the published foler to Ubuntu share and from terminal I ran -
+   ./'Password Mgm'
+
+This time the applcation works ok. Bigo. Finally I learned to write cross-plateform applcations, that ran 
+both in windows and linux. Hopefully it will run in mac too. 
+
